@@ -19,6 +19,7 @@ Pages are splitted up in blocks, which are pregenerated using some worker thread
 ## My Concept in combining both technologys:
 
 1. Lets assume you have a typical configuration:  2 Servers and a Varnish-Server as "loadbalancer":
+
 ```
 +-----------------+
 |                 |
@@ -35,6 +36,7 @@ Pages are splitted up in blocks, which are pregenerated using some worker thread
 |                 |
 +-----------------+
 ```
+
 2. Introduce a new "Worker Application", which will use some sort of queue technology. Put it onto another Server*
 
 *Note: The "Worker" Application could be on one of the Servers, but its easier to explain the idea if you assume its on its own server.
@@ -122,7 +124,6 @@ Pages are splitted up in blocks, which are pregenerated using some worker thread
 
 ```
 
-
 5. The worker will process the  entrys which are on the queue and contact the varnish. Add the "special" Parameter from Step 3, to force varnish requesting Server 2.
 
 ```
@@ -150,6 +151,7 @@ Pages are splitted up in blocks, which are pregenerated using some worker thread
 ```
 
 6. ??? (maybe scale it up by adding more webservers and workers?)
+
 7. Profit
 
 
