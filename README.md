@@ -140,7 +140,7 @@ Pages are splitted up in blocks, which are pregenerated using some worker thread
     |                 |       |                                      |
     |  Webserver 2    <-------+                                      |
     |                 |                                              |
-    +-----------------+   "Cache"-Miss -> Cache misses could still appear.                                           |
+    +-----------------+                                              |
                                                                      |
                                                                      |
     +-----------------+                                              |
