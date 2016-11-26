@@ -20,22 +20,22 @@ Pages are splitted up in blocks, which are pregenerated using some worker thread
 
 1. Lets assume you have a typical configuration:  2 Servers and a Varnish-Server as "loadbalancer":
 
-```
-+-----------------+
-|                 |
-|  Webserver 1    <---+
-|                 |   |
-+-----------------+   |        +---------------------+
-                      |        |                     |
-                      +--------+    Varnish          |
-                      |        |                     |
-                      |        +---------------------+
-+-----------------+   |
-|                 |   |
-|  Webserver 2    <---+
-|                 |
-+-----------------+
-```
+    ```
+    +-----------------+
+    |                 |
+    |  Webserver 1    <---+
+    |                 |   |
+    +-----------------+   |        +---------------------+
+                          |        |                     |
+                          +--------+    Varnish          |
+                          |        |                     |
+                          |        +---------------------+
+    +-----------------+   |
+    |                 |   |
+    |  Webserver 2    <---+
+    |                 |
+    +-----------------+
+    ```
 
 2. Introduce a new "Worker Application", which will use some sort of queue technology. Put it onto another Server*
 
