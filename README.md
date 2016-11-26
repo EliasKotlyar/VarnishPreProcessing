@@ -3,7 +3,7 @@ A Concept of preprocessing using varnish
 
 ## Introduction
 
-Short time before writing this article, i have seen the awesome talk from Fabian Schrank about Lizards&Pumpkins. It has inspired me, to think about the topic of "cache vs pregeneration". Here are my toughts:
+Short time before writing this article, i have seen the awesome talk from Fabian Blechschmidt about Lizards&Pumpkins. It has inspired me, to think about the topic of "cache vs pregeneration". Here are my toughts:
 
 ## General Concepts:
 
@@ -124,7 +124,7 @@ Pages are splitted up in blocks, which are pregenerated using some worker thread
     
     ```
 
-5. The worker will process the  entrys which are on the queue and contact the varnish. Add the "special" Parameter from Step 3, to force varnish requesting Server 2.
+5. The worker will process the entrys(=URL) which are on the queue and contact the varnish. Add the "special" Parameter from Step 3, to force varnish requesting Server 2.
 
     ```
     +-----------------+
